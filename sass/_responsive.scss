@@ -1,0 +1,182 @@
+/******************** Responsive */
+
+@media screen and (max-width: $desk+$unit*4) {
+  nav, hgroup, article, .post li {
+    margin: 0 $unit*4;
+    padding: 0;
+    max-width: $desk;
+  }
+  .post li {
+    max-width: $desk;
+    margin: $unit*6 $unit*4;
+    &:nth-of-type(2n) {
+      margin: $unit*6 $unit*4;
+    }
+    &.card {
+      margin: $unit*6 $unit*4;
+      max-width: $desk;
+    }
+  }
+  figure {
+    img {
+      left: 50%;
+      max-width: $desk;
+      transform: translateX(-50%);
+    }
+  }
+  aside {
+    margin-right: 0;
+    max-width: 40%;
+  }
+  blockquote {
+    h3 {
+      padding: $unit 0 $unit $unit*2;
+      width: calc(100% - (#{$unit})*2);
+    }
+  }
+  table {
+    width: 100%;
+  }
+  pre > code {
+    width: calc(100% - (#{$unit})*4);
+  }
+  footer {
+    nav {
+      padding: $unit*3 0 0;
+    }
+  }
+
+/********* Marketing */
+
+  .over-run + section {
+    margin-top: -$unit*4;
+  }
+
+  .left, .center, .commands {
+    article {
+      max-width: calc(100% - (#{$unit})*4);
+      margin: 0 $unit*4;
+      > div.card {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .three {
+    article {
+      > div {
+        max-width: calc(50% - (#{$unit}*4.25));
+        &:nth-of-type(3n) {
+          margin: $unit*4 $unit*6 $unit*4 0;
+        }
+        &:nth-of-type(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .command {
+    p, p.input {
+      margin: $unit 0;
+      width: calc(100% - (#{$unit})*4);
+    }
+  }
+
+  figure.two {
+    figcaption {
+      max-width: calc(100% - (#{$unit}*0.375));
+    }
+    > img {
+      max-width: calc(100% - (#{$unit}*0.375));
+      margin: $unit*2 0 0;
+    }
+  }
+
+/********* App */
+
+  .over-run + section.button-stack article {
+    > div.card {
+      min-width: 100%;
+      width: auto;
+    }
+  }
+
+}
+
+@media screen and (max-width: $palm+$unit*4) {
+  nav, hgroup, article, .post li {
+    margin: 0 $unit*2;
+  }
+  .post li {
+    margin: $unit*4 $unit*2;
+    &:nth-of-type(2n) {
+      margin: $unit*4 $unit*2;
+    }
+    &.card {
+      border-right: none;
+      border-left: none;
+      border-radius: 0;
+      margin: $unit*4 0;
+      img {
+        border-radius: 0;
+      }
+    }
+  }
+  h1, ul {
+    max-width: 100%;
+  }
+  figure {
+    img {
+      max-width: $palm;
+    }
+  }
+  blockquote {
+    h3 {
+      margin-left: -$unit*2;
+    }
+    cite {
+      margin-left: 0;
+    }
+  }
+  footer {
+    nav {
+      padding: $unit*3 0 0;
+      h1 {
+        display: none;
+      }
+      ul {
+        float: left;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+/********* Marketing */
+
+
+  .left, .center, .commands {
+    article {
+      margin: 0 $unit*2;
+    }
+  }
+
+  .two, .three {
+    article > div {
+      margin-right: 0;
+      max-width: 100%;
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+}

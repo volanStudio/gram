@@ -1,0 +1,22 @@
+/********** Code */
+
+code {
+  background-color: $highlight;
+  border: $border $shade;
+  border-radius: $radius;
+  display: inline-block;
+  font-size: 0.875em;
+  padding: 0 $unit*0.5;
+  transform: translateY(-1px);
+}
+
+pre {
+  max-width: 100%;
+  margin: $unit 0;
+  padding: 0;
+  code {
+    width: $content-width - $unit*2;
+    tab-size: 2;
+    padding: $unit*0.5 $unit;
+  }
+}

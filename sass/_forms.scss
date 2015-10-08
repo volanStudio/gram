@@ -1,0 +1,242 @@
+/*
+** Form Reset
+*******************************************************************************/
+
+input {
+  font-size: $font-size;
+  line-height: $line-height;
+  outline: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: $border $shade;
+  margin: 0 $unit;
+  padding: $unit $unit*2 $unit*2;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+
+
+/*
+** Form Reset
+*******************************************************************************/
+::-webkit-input-placeholder {
+   color: $text-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $text-light;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $text-light;
+}
+
+:-ms-input-placeholder {
+   color: $text-light;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  color: $text;
+  font-size: $font-size;
+  height: $unit * 6;
+  padding: $unit $unit*2 $unit*1.25;
+  background-color: #fff;
+  background-image: none;
+  background-position: 105% 50%;
+  background-size: 20px 16px;
+  border: $border $shade;
+  border-radius: $radius;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+select {
+  option {
+    float:left;
+    padding: $unit;
+    margin: $unit $unit 0 0;
+    border: $border $shade;
+  }
+  option:checked {
+    background: lighten(#000, 97%);
+    border: $border $shade;
+    border-radius: $radius;
+  }
+}
+
+select:not([multiple]) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  background-size: 24px 3px;
+  height: $unit * 1.5;
+  -webkit-appearance: none;
+  -webkit-border-radius: $radius;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+}
+textarea {
+  min-height: $unit * 1.5;
+  padding-top: $unit / 2.3;
+  padding-bottom: $unit / 6;
+  max-width: 100%;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: $border $feature;
+  outline: 0;
+}
+
+label,
+legend {
+  display: block;
+  margin: $unit*2 0 $unit;
+  font-weight: normal;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+
+input[type="radio"] {
+  display:none;
+}
+
+input[type="radio"]:checked {
+  display: inline;
+  float: right;
+  margin: $unit;
+}
+
+
+::-webkit-input-placeholder {
+  color: $text-light;
+  padding: 0;
+  text-align: left;
+}
+::-moz-placeholder {
+  color: $text-light;
+  padding: 0;
+  text-align: left;
+}
+:-ms-input-placeholder {
+  color: $text-light;
+  padding: 0;
+  text-align: left;
+}
+
+
+
+
+/*
+** Form Support
+*******************************************************************************/
+label small {
+  color: $text-light;
+  float: right;
+}
+
+
+
+/*
+** Validation
+*******************************************************************************/
+
+input.error {
+  transition: all, 0.2s, ease-in-out;
+  border: 1px solid rgba(255, 191, 54, 1.0);
+  background-image: url('../img/forms/error.png');
+  background-position: 99% 50%;
+  background-repeat: no-repeat;
+  background-size: 20px 16px;
+  &::-webkit-input-placeholder {
+  transition: all, 0.2s, ease-in-out;
+    color: rgba(255, 191, 54, 1.0);
+    padding-right: $unit;
+    text-align: right;
+  }
+  &::-moz-placeholder {
+    transition: all, 0.2s, ease-in-out;
+    color: rgba(255, 191, 54, 1.0);
+    padding-right: $unit;
+    text-align: right;
+  }
+  &:-ms-input-placeholder {
+    transition: all, 0.2s, ease-in-out;
+    color: rgba(255, 191, 54, 1.0);
+    padding-right: $unit;
+    text-align: right;
+  }
+}

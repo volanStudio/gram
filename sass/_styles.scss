@@ -1,0 +1,205 @@
+/******************** Styles */
+
+/******************** Layout */
+
+section, footer {
+  overflow: hidden;
+  padding: $unit 0;
+  width: 100%;
+}
+
+section:first-of-type {
+  background: $feature-dark;
+  color: white;
+  h1 {
+    margin-bottom: $unit*0.25;
+  }
+  a {
+    color: white;
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+nav {
+  margin: $unit*0.5 auto;
+  overflow: hidden;
+  padding: 0;
+  max-width: $content-width;
+}
+
+hgroup {
+  margin: $unit*2 auto $unit*1.5;
+  overflow: hidden;
+  max-width: $content-width;
+}
+
+article {
+  margin: $unit*2 auto $unit*4;
+  max-width: $column-width;
+}
+
+footer {
+  nav {
+    border-top: $border $shade;
+    padding: $unit*1.5 $unit*2 0;
+  }
+}
+
+/********** Meta */
+
+header {
+  margin: 0 auto $unit;
+  max-width: $content-width;
+  table {
+    width: 100%;
+    td {
+      border: none;
+      padding: 0 $unit*0.5 $unit*0.25 0;
+      &:last-of-type {
+        padding-right: 0;
+        text-align: right;
+      }
+    }
+    th {
+      color: $text-light;
+      font-size: 0.625em;
+      padding: 0 $unit*0.5 0 0;
+      text-transform: uppercase;
+      &:last-of-type {
+        padding-right: 0;
+        text-align: right;
+      }
+    }
+    tr:last-of-type {
+      border: none;
+    }
+  }
+}
+
+/********** Navigation */
+
+nav {
+  > * {
+    font-size: 0.875em;
+  }
+  > a {
+    float: left;
+    line-height: 2;
+    margin: 0;
+    padding-top: $unit*0.375;
+    max-width: 35%;
+  }
+  ul {
+    float: right;
+    max-width: 60%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    padding: 0 $unit;
+    line-height: 2.5;
+    margin: $unit*0.25 0;
+  }
+}
+
+/********** Article */
+
+article {
+  padding-right: $column-pad;
+  ul, ol {
+    padding: 0;
+  }
+  li {
+    margin: $unit*0.25 $unit*1.75;
+    ul {
+      margin-bottom: $unit*.75;
+      li {
+        color: $text-light;
+        margin: $unit*0.125 $unit*2.25;
+      }
+    }
+  }
+}
+
+figure {
+  font-size: 0.875em;
+  margin: 0;
+  padding: $unit*2 0;
+  max-width: 100%;
+  img {
+    left: calc(50% + 100px);
+    margin: 0;
+    position: relative;
+    transform: translateX(-50%);
+  }
+  figcaption {
+    color: $text-light;
+    margin: $unit*2 0;
+  }
+}
+
+blockquote {
+  margin: $unit*3 0;
+  max-width: $content-width;
+  h3 {
+    border-left: $border-dotted $selection;
+    padding: $unit*0.5 0 $unit*0.5 $unit;
+    width: $content-width;
+  }
+  cite {
+    margin-left: $unit;
+  }
+}
+
+aside {
+  float: right;
+  font-size: 0.75em;
+  margin: 0 0 $unit*2 $unit*2;
+  margin-right: -$column-pad;
+  padding: 0 $unit $unit*0.75;
+  max-width: 50%;
+  border-top: $border-dotted $selection;
+  border-bottom: $border-dotted $selection;
+}
+
+
+
+/******************** Decoration */
+
+a {
+  color: $feature;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+a:hover {
+  color: $feature-light;
+}
+
+::selection {
+  background: $selection;}
+
+/********** Buttons */
+
+.button {
+  background: $feature;
+  border: 1px solid $shade;
+  color: $feature-dark;
+  margin-right: $unit*2;
+  margin-left: $unit*2;
+}
+
+.hollow {
+  border: 1px solid $selection;
+  margin-right: $unit*2;
+  margin-left: $unit*2;
+}
