@@ -1,29 +1,29 @@
 /******************** Variables */
 
 $font-family: HelveticaNeue-Book, 'Helvetica Neue Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-size: 16px;
-$line-height: 1.65;
+$font-size: 1.6rem;
+$line-height: 1.45;
 
-$unit: 1em;
-$radius: 0.125em;
+$unit: 0.8rem;
+$radius: 0.2rem;
 
 $text: rgba(75, 75, 75, 1.0);
 $text-dark: rgba(25, 25, 25, 1.0);
-$text-light: rgba(125, 125, 125, 1.0);
+$text-light: rgba(200, 200, 200, 1.0);
 
-$selection: rgba(0, 0, 0, 0.16);
+$selection: rgba(0, 0, 0, 0.10);
 $highlight: rgba(0, 0, 0, 0.02);
 
 $feature: rgba(12, 166, 242, 1.0);
 $feature-dark: rgba(32, 53, 64, 1.0);
 $feature-light: rgba(38, 183, 255, 1.0);
 
-$shade: rgba(0, 0, 0, 0.08);
-$shine: rgba(255, 255, 255, 0.08);
+$shade: rgba(0, 0, 0, 0.02);
+$shine: rgba(255, 255, 255, 0.02);
 
 $shade-solid: rgba(248, 248, 248, 1.0);
 
-$shadow: 0 0 $unit*0.5 0 $shade;
+$shadow: 0 0 $unit 0 $selection;
 
 $border: 1px solid;
 $border-dashed: 1px dashed;
@@ -32,11 +32,11 @@ $border-dotted: 1px dotted;
 
 /******** Responsive */
 
-$desk: 55em;
-$palm: 32em;
+$desk: 55rem;
+$palm: 32rem;
 
-$content-offest: 1em;
-$column-pad: 13em;
+$content-offest: 1rem;
+$column-pad: 13rem;
 
 $content-width: $desk - $content-offest;
 $column-width: $content-width - $column-pad;

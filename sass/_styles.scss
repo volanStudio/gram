@@ -4,89 +4,83 @@
 
 section, footer {
   overflow: hidden;
-  padding: $unit 0;
   width: 100%;
 }
 
-section:first-of-type {
-  background: $feature-dark;
-  color: white;
-  h1 {
-    margin-bottom: $unit*0.25;
-  }
-  a {
-    color: white;
-    &:visited {
-      color: white;
-    }
-    &:hover {
-      color: white;
-    }
-  }
+section {
+  display: flex;
+  align-items: stretch;
+  height: calc(100vh - 60px);
 }
 
 nav {
-  margin: $unit*0.5 auto;
   overflow: hidden;
-  padding: 0;
-  max-width: $content-width;
+  padding: 8px 12px;
+  height: 44px;
+}
+
+article, aside {
+  flex: 1 1 auto;
+  padding: 12px 0;
+}
+
+/********** Aside */
+
+aside {
+  background: $shade;
+  border: $border $selection;
+  box-shadow: $shadow;
+  flex-basis: 240px;
+  min-width:240px;
+  max-width:240px;
 }
 
 hgroup {
-  margin: $unit*2 auto $unit*1.5;
-  overflow: hidden;
-  max-width: $content-width;
+  padding: 0 12px;
 }
 
-article {
-  margin: $unit*2 auto $unit*4;
-  max-width: $column-width;
+ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
 }
 
-footer {
-  nav {
-    border-top: $border $shade;
-    padding: $unit*1.5 $unit*2 0;
+ul ul {
+  padding: 0;
+}
+
+li {
+  font-weight: 500;
+  padding: 0 12px;
+}
+
+ul ul > li {
+  background: $shade;
+  border-top: $border $selection;
+  margin: 0 -12px;
+  padding-top: 12px;
+  p {
+    font-weight: 400;
+  }
+  &:last-of-type {
+    border-bottom: $border $selection;
   }
 }
 
-/********** Meta */
-
-header {
-  margin: 0 auto $unit;
-  max-width: $content-width;
-  table {
-    width: 100%;
-    td {
-      border: none;
-      padding: 0 $unit*0.5 $unit*0.25 0;
-      &:last-of-type {
-        padding-right: 0;
-        text-align: right;
-      }
-    }
-    th {
-      color: $text-light;
-      font-size: 0.625em;
-      padding: 0 $unit*0.5 0 0;
-      text-transform: uppercase;
-      &:last-of-type {
-        padding-right: 0;
-        text-align: right;
-      }
-    }
-    tr:last-of-type {
-      border: none;
-    }
-  }
+.badge {
+  background: $feature;
+  border-radius: 18rem;
+  color: #fff;
+  float: right;
+  height: 18px;
+  line-height: 18px;
+  width: 18px;
+  text-align: center;
 }
 
 /********** Navigation */
 
 nav {
-  > * {
-    font-size: 0.875em;
-  }
   > a {
     float: left;
     line-height: 2;
@@ -114,62 +108,22 @@ nav {
 
 /********** Article */
 
-article {
-  padding-right: $column-pad;
-  ul, ol {
-    padding: 0;
-  }
-  li {
-    margin: $unit*0.25 $unit*1.75;
-    ul {
-      margin-bottom: $unit*.75;
-      li {
-        color: $text-light;
-        margin: $unit*0.125 $unit*2.25;
-      }
-    }
-  }
+.card {
+  border: $border $selection;
+  border-radius: $radius;
+  margin: 12px 12px 0;
 }
 
-figure {
-  font-size: 0.875em;
-  margin: 0;
-  padding: $unit*2 0;
-  max-width: 100%;
-  img {
-    left: calc(50% + 100px);
-    margin: 0;
-    position: relative;
-    transform: translateX(-50%);
-  }
-  figcaption {
-    color: $text-light;
-    margin: $unit*2 0;
-  }
+.body {
+  padding: 12px;
 }
 
-blockquote {
-  margin: $unit*3 0;
-  max-width: $content-width;
-  h3 {
-    border-left: $border-dotted $selection;
-    padding: $unit*0.5 0 $unit*0.5 $unit;
-    width: $content-width;
-  }
-  cite {
-    margin-left: $unit;
-  }
-}
-
-aside {
-  float: right;
-  font-size: 0.75em;
-  margin: 0 0 $unit*2 $unit*2;
-  margin-right: -$column-pad;
-  padding: 0 $unit $unit*0.75;
-  max-width: 50%;
-  border-top: $border-dotted $selection;
-  border-bottom: $border-dotted $selection;
+.footer {
+  background: $shade;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  border-top: $border $selection;
+  padding: 12px;
 }
 
 
