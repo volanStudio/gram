@@ -9,14 +9,17 @@ $radius: 0.2rem;
 
 $text: rgba(75, 75, 75, 1.0);
 $text-dark: rgba(25, 25, 25, 1.0);
-$text-light: rgba(200, 200, 200, 1.0);
+$text-light: rgba(125, 125, 125, 1.0);
+$text-lightest: rgba(200, 200, 200, 1.0);
 
 $selection: rgba(0, 0, 0, 0.10);
 $highlight: rgba(0, 0, 0, 0.02);
 
-$feature: rgba(12, 166, 242, 1.0);
-$feature-dark: rgba(32, 53, 64, 1.0);
-$feature-light: rgba(38, 183, 255, 1.0);
+$feature: #1BB580;
+$feature-dark: darken($feature, 5%);
+$feature-light: lighten($feature, 5%);
+
+$alert: #FF695D;
 
 $shade: rgba(0, 0, 0, 0.02);
 $shine: rgba(255, 255, 255, 0.02);

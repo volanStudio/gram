@@ -4,6 +4,7 @@
 
 input {
   font-size: $font-size;
+  margin-right: $unit*2;
   line-height: $line-height;
   outline: none;
 }
@@ -80,19 +81,26 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  color: $text;
-  font-size: $font-size;
-  height: $unit * 6;
-  padding: $unit $unit*2 $unit*1.25;
+  transition: all 200ms ease;
+  color: $text-light;
+  font-size: 1.4rem;
+  height: $unit * 2.5;
+  padding: 0 0 $unit;
   background-color: #fff;
   background-image: none;
   background-position: 105% 50%;
   background-size: 20px 16px;
-  border: $border $shade;
-  border-radius: $radius;
+  border: none;
+  border-bottom: $border-dashed $selection;
   box-shadow: none;
   box-sizing: border-box;
   width: 100%;
+}
+
+input[disabled] {
+  border: none;
+  color: $text;
+  font-weight: 500;
 }
 
 select {
@@ -114,7 +122,7 @@ select:not([multiple]) {
   background-position: 100% center;
   background-repeat: no-repeat;
   background-size: 24px 3px;
-  height: $unit * 1.5;
+  height: $unit * 3.1;
   -webkit-appearance: none;
   -webkit-border-radius: $radius;
 }
@@ -149,15 +157,23 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: $border $feature;
-  outline: 0;
+  border: none;
+  border-bottom: $border-dashed $feature;
 }
 
 label,
 legend {
   display: block;
-  margin: $unit*2 0 $unit;
+  margin: 0;
   font-weight: normal;
+  font-size: 1.4rem;
+}
+
+label {
+  color: $text-lightest;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 fieldset {
